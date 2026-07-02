@@ -1,0 +1,77 @@
+.hero {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+
+  padding: 1px 0;
+  width: 100%;
+  height: 700px;
+
+  /* Фон + картинка : градієнт над картинкою */
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    image-set(
+      url('/images/banner-hero-desktop.webp') 1x,
+      url('/images/banner-hero-desktop@2x.webp') 2x
+    );
+  /* Повторення у фоні фонової картинки */
+  background-repeat: no-repeat;
+  /* Позиціонування фонової картинки по X та Y */
+  background-position: center;
+  /* Зміна розміру фонового зображення : cover - Максимально вмістити в блок */
+  background-size: cover;
+  /* Максимальна ширина фонової картинки */
+  max-width: 1440px;
+  /* Вирівнювання по центру */
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 600px;
+  margin-top: 195px;
+  margin-left: 64px;
+  text-align: left;
+}
+
+.title {
+  font-family: var(--font-inter);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: var(--color-inputs);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-family: var(--font-inter);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: var(--color-inputs);
+  margin-bottom: 40px;
+}
+
+.button {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+
+  display: inline-block;
+  padding: 16px 48px;
+  background-color: var(--color-grey-green);
+  color: var(--color-white);
+
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-green-hover);
+}
