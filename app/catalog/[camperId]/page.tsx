@@ -8,10 +8,19 @@
 // import Image from 'next/image';
 // import styles from './page.module.css';
 
-export default function Camper() {
-  return (
-    <div>
-      <main>Campar</main>
-    </div>
-  );
-}
+import { getCamperById } from '@/lib/api/clientApi';
+import CamperDetails from '@/components/CamperDetails/CamperDetails';
+
+type Props = {
+  params: Promise<{ camperId: string }>;
+};
+
+const CamperViewPage = async ({ params }: Props) => {
+  const { camperId } = await params;
+  const camper = await getCamperById(camperId);
+  console.log('camper', camper);
+
+  return <CamperDetails camper={camper} />;
+};
+
+export default CamperViewPage;

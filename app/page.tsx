@@ -9,7 +9,7 @@ import Link from 'next/link';
 import css from './page.module.css';
 // Імпорт компонентів
 
-export default function Home() {
+const Home = async () => {
   return (
     <>
       <section className={css.hero}>
@@ -23,4 +23,6 @@ export default function Home() {
       </section>
     </>
   );
-}
+};
+
+export default Home;

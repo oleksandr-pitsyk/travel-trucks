@@ -10,7 +10,7 @@ import './globals.css';
 // Імпорт компонента TanStackProvider
 // Підключення провайдера React Query,
 // щоб усі клієнтські компоненти могли використовувати useQuery, кеш і мутації.
-// import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
+import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 
 // Імпорт компонента Header
 import Header from '@/components/Header/Header';
@@ -72,17 +72,17 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${inter.variable} ${manrope.variable} "container"`}>
-        {/* <TanStackProvider> */}
-        {/* Провайдер авторизації */}
-        {/* <AuthProvider> */}
-        <Header />
-        <main>
-          {children}
-          {modal}
-        </main>
-        {/* <Footer /> */}
-        {/* </AuthProvider> */}
-        {/* </TanStackProvider> */}
+        <TanStackProvider>
+          {/* Провайдер авторизації */}
+          {/* <AuthProvider> */}
+          <Header />
+          <main>
+            {children}
+            {modal}
+          </main>
+          {/* <Footer /> */}
+          {/* </AuthProvider> */}
+        </TanStackProvider>
       </body>
     </html>
   );
