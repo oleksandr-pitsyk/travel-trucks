@@ -19,23 +19,23 @@ type Props = {
 const CamperDetails = ({ camper }: Props) => {
   // Деструктуризація об'єкта camper для зручного доступу до його властивостей
   const {
-    id,
+    // id,
     name,
     price,
-    rating,
-    location,
+    // rating,
+    // location,
     description,
-    form,
-    length,
-    width,
-    height,
-    tank,
-    consumption,
-    transmission,
-    engine,
-    amenities,
+    // form,
+    // length,
+    // width,
+    // height,
+    // tank,
+    // consumption,
+    // transmission,
+    // engine,
+    // amenities,
     gallery,
-    totalReviews,
+    // totalReviews,
   } = camper;
   // ==================================================================================
   // Відповідь запиту кемпера по ID (camperId) з app/catalog/[camperId]/page.tsx
