@@ -17,6 +17,7 @@ import css from './CamperCard.module.css';
 // import modalCss from '@/app/@modal/logout/ModalLogout.module.css';
 
 import type { CampersResponse } from '@/types/camper';
+// import DetailsReviewsLocation from '../DetailsReviewsLocation/DetailsReviewsLocation';
 
 type CamperCardProps = {
   camper: CampersResponse;
@@ -76,6 +77,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
               <p className={css.name}>{name}</p>
               <p className={css.price}>€{price}</p>
             </div>
+            {/* <DetailsReviewsLocation camper={camper} /> */}
             <div className={css.details}>
               <div className={css.reviews}>
                 <svg className={css.icon} aria-hidden="true">

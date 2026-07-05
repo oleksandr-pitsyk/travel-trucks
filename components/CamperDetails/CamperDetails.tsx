@@ -4,12 +4,11 @@
 import Image from 'next/image';
 // import { useQuery } from '@tanstack/react-query';
 // import { useAuthStore } from '@/lib/store/authStore';
-// import { useFavorite } from '@/hooks/useFavorite';
-// import { getIngredients } from '@/lib/api/clientApi';
+
+// import DetailsReviewsLocation from '../DetailsReviewsLocation/DetailsReviewsLocation';
 import { Camper } from '@/types/camper';
 
 // import Modal from '@/components/Modal/Modal';
-// import SaveRecipeNotAuthorized from '@/components/SaveRecipeNotAuthorized/SaveRecipeNotAuthorized';
 
 import css from './CamperDetails.module.css';
 
@@ -118,6 +117,7 @@ const CamperDetails = ({ camper }: Props) => {
             <div className={css.headerDescription}>
               Header and Description
               <p className={css.name}>{name}</p>
+              {/* <DetailsReviewsLocation camper={camper} /> */}
               <p className={css.price}>€{price}</p>
               <p className={css.description}>{description}</p>
             </div>

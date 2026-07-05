@@ -9,14 +9,14 @@
 import css from './Catalog.module.css';
 
 // import { Campers } from '@/types/camper';
-import { getCampers } from '@/lib/api/clientApi';
+import { getCampers } from '../../lib/api/clientApi';
 
-import CamperCard from '@/components/CamperCard/CamperCard';
+import CamperCard from '../../components/CamperCard/CamperCard';
 
 const Catalog = async () => {
   const { campers } = await getCampers();
 
-  //   page: number = 1,
+  // page: number = 1,
   // perPage: number = 4,
   // location?: string,
   // form?: string,

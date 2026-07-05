@@ -182,25 +182,25 @@
   stroke: currentColor; */
 }
 
-.saveIcon {
+/* .saveIcon {
   width: 24px;
   height: 24px;
   display: block;
   fill: none;
   stroke: currentColor;
-}
+} */
 
-.loader {
+/* .loader {
   width: 18px;
   height: 18px;
   border: 2px solid currentColor;
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
-}
+} */
 
-@keyframes spin {
+/* @keyframes spin {
   to {
     transform: rotate(360deg);
   }
-}
+} */

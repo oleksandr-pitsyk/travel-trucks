@@ -8,8 +8,8 @@
 // import Image from 'next/image';
 // import styles from './page.module.css';
 
-import { getCamperById } from '@/lib/api/clientApi';
-import CamperDetails from '@/components/CamperDetails/CamperDetails';
+import { getCamperById } from '../../../lib/api/clientApi';
+import CamperDetails from '../../../components/CamperDetails/CamperDetails';
 
 type Props = {
   params: Promise<{ camperId: string }>;
