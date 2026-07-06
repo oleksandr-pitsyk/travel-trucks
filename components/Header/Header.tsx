@@ -32,7 +32,7 @@ export default function Header() {
               </Link>
             </li>
             <li className={css.navigationItem}>
-              <Link href="/catalog" className={css.navigationLink}>
+              <Link href="/" className={css.navigationLink}>
                 Catalog
               </Link>
             </li>

@@ -8,13 +8,15 @@
 // import Image from 'next/image';
 import css from './Catalog.module.css';
 
-// import { Campers } from '@/types/camper';
+// import { CampersResponse } from '@/types/camper';
 import { getCampers } from '../../lib/api/clientApi';
 
 import CamperCard from '../../components/CamperCard/CamperCard';
 
 const Catalog = async () => {
   const { campers } = await getCampers();
+
+  console.log('campers', campers);
 
   // page: number = 1,
   // perPage: number = 4,

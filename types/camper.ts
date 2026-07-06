@@ -32,6 +32,39 @@
 //     "totalReviews": 0
 //   }
 
+// По факту:
+//   {
+//   id: 'cmqv06i1s007zyyxt53zaqvs0',
+//   name: 'Basecamp Alcove 26H',
+//   price: 11000,
+//   rating: 4.5,
+//   location: 'Ukraine, Lviv',
+//   description: 'The Basecamp Alcove 26H is a hybrid-powered alcove motorhome that blends eco-efficiency with classic comfort. Its spacious layout and full amenity set make it a top pick for families wanting to reduce their footprint without giving up the conveniences of a well-equipped home on wheels.',
+//   form: 'alcove',
+//   length: '7.2m',
+//   width: '2.6m',
+//   height: '3.65m',
+//   tank: '185l',
+//   consumption: '20l/100km',
+//   transmission: 'automatic',
+//   engine: 'hybrid',
+//   amenities: [
+//     'ac',
+//     'bathroom',
+//     'kitchen',
+//     'tv',
+//     'radio',
+//     'refrigerator',
+//     'microwave',
+//     'gas',
+//     'water'
+//   ],
+//   createdAt: '2026-06-26T14:05:05.632Z',
+//   updatedAt: '2026-06-26T14:05:05.632Z',
+//   coverImage: 'https://ac.goit.global/fullstack/career/campers/mighty-class-c-large-mt/mighty-class-c-large-mt-1.jpg',
+//   totalReviews: 2
+// }
+
 // =========================================================================================
 // GET /campers/{camperId}
 // {
@@ -64,6 +97,49 @@
 //   "updatedAt": "2026-07-02T03:31:11.050Z"
 // }
 
+// ==================================================================================
+// Відповідь запиту кемпера по ID (camperId) з app/catalog/[camperId]/page.tsx
+// =================================================================================
+// camper {
+//   id: 'cmqv06i160070yyxt0zaj0d7z',
+//   name: 'Ampere Roam 85',
+//   price: 15500,
+//   rating: 4.7,
+//   location: 'Ukraine, Odesa',
+//   description: 'The Ampere Roam 85 is our flagship electric motorhome — a fully integrated beast powered by a 105 kWh battery pack. Built for those who demand the best, it delivers a full suite of premium amenities inside a spacious integrated body, all with zero emissions. The silent, powerful drive redefines what a high-end motorhome can be.',
+//   form: 'integrated',
+//   length: '8.2m',
+//   width: '2.6m',
+//   height: '3.85m',
+//   tank: '105kWh',
+//   consumption: '35kWh/100km',
+//   transmission: 'automatic',
+//   engine: 'electric',
+//   amenities: [
+//     'ac',
+//     'bathroom',
+//     'kitchen',
+//     'tv',
+//     'radio',
+//     'refrigerator',
+//     'microwave',
+//     'water'
+//   ],
+//   createdAt: '2026-06-26T14:05:05.611Z',
+//   updatedAt: '2026-06-26T14:05:05.611Z',
+//   gallery: [
+//     {
+//       id: 'cmqv06i160071yyxtpl4vzghj',
+//       camperId: 'cmqv06i160070yyxt0zaj0d7z',
+//       thumb: 'https://ac.goit.global/fullstack/career/campers/wild-explorer/wild-explorer-1.jpg',
+//       original: 'https://ac.goit.global/fullstack/career/campers/wild-explorer/wild-explorer-1.jpg',
+//       order: 1
+//     },
+//   ],
+//   totalReviews: 2
+// }
+// ==================================================================================
+
 // ==========================================================================================
 
 import { CamperForm, CamperEngine, CamperAmenities, CamperTransmission } from './filter';
@@ -84,7 +160,7 @@ export interface Camper {
   consumption: string;
   transmission: CamperTransmission;
   engine: CamperEngine;
-  amenities: CamperAmenities;
+  amenities: CamperAmenities[];
   gallery: {
     id: string;
     camperId: string;
@@ -92,6 +168,7 @@ export interface Camper {
     original: string;
     order: number;
   }[];
+  coverImage: string;
   createdAt: string;
   updatedAt: string;
 }

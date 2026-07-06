@@ -6,7 +6,7 @@ import { nextServer } from './api';
 import { isAxiosError } from 'axios';
 
 // Імпорт інтерфейсів
-import type { Camper, CampersResponse } from '@/types/camper';
+import type { Camper } from '@/types/camper';
 // import type { CamperEngine, CamperForm, CamperTransmission } from '@/types/filter';
 
 // *********************************************************************************
@@ -67,7 +67,7 @@ interface GetCampersHttpResponse {
   perPage: number;
   total: number;
   totalPages: number;
-  campers: CampersResponse[]; // Відповідь містить масив камперів у властивості campers
+  campers: Camper[]; // Відповідь містить масив камперів у властивості campers
 }
 
 export async function getCampers(

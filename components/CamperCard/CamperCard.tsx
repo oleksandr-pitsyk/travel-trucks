@@ -16,11 +16,11 @@ import css from './CamperCard.module.css';
 // import Modal from '@/components/Modal/Modal';
 // import modalCss from '@/app/@modal/logout/ModalLogout.module.css';
 
-import type { CampersResponse } from '@/types/camper';
+import type { Camper } from '@/types/camper';
 // import DetailsReviewsLocation from '../DetailsReviewsLocation/DetailsReviewsLocation';
 
 type CamperCardProps = {
-  camper: CampersResponse;
+  camper: Camper;
 };
 
 const CamperCard = ({ camper }: CamperCardProps) => {
@@ -57,6 +57,38 @@ const CamperCard = ({ camper }: CamperCardProps) => {
   //   coverImage: string;
   //   totalReviews: number;
 
+  //   {
+  //   id: 'cmqv06i1s007zyyxt53zaqvs0',
+  //   name: 'Basecamp Alcove 26H',
+  //   price: 11000,
+  //   rating: 4.5,
+  //   location: 'Ukraine, Lviv',
+  //   description: 'The Basecamp Alcove 26H is a hybrid-powered alcove motorhome that blends eco-efficiency with classic comfort. Its spacious layout and full amenity set make it a top pick for families wanting to reduce their footprint without giving up the conveniences of a well-equipped home on wheels.',
+  //   form: 'alcove',
+  //   length: '7.2m',
+  //   width: '2.6m',
+  //   height: '3.65m',
+  //   tank: '185l',
+  //   consumption: '20l/100km',
+  //   transmission: 'automatic',
+  //   engine: 'hybrid',
+  //   amenities: [
+  //     'ac',
+  //     'bathroom',
+  //     'kitchen',
+  //     'tv',
+  //     'radio',
+  //     'refrigerator',
+  //     'microwave',
+  //     'gas',
+  //     'water'
+  //   ],
+  //   createdAt: '2026-06-26T14:05:05.632Z',
+  //   updatedAt: '2026-06-26T14:05:05.632Z',
+  //   coverImage: 'https://ac.goit.global/fullstack/career/campers/mighty-class-c-large-mt/mighty-class-c-large-mt-1.jpg',
+  //   totalReviews: 2
+  // }
+
   return (
     <>
       <article className={css.card}>
@@ -66,6 +98,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
           alt={name}
           width={219}
           height={240}
+          loading="eager"
           // sizes="(max-width: 767px) 337px, (max-width: 1439px) 315px, 264px"
           className={css.cardImage}
         />
