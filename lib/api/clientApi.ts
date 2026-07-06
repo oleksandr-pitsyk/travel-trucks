@@ -62,7 +62,7 @@ import type { Camper } from '@/types/camper';
 // ------------------------------------------------------------------------------------------
 
 // Типізація відповіді Get-запиту від Axios - колекція кемперов - згідно структури бекенда :
-interface GetCampersHttpResponse {
+export interface GetCampersHttpResponse {
   page: number;
   perPage: number;
   total: number;
