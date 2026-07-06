@@ -1,0 +1,206 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--color-inputs);
+  /* width: 288px; */
+  /* height: 431px; */
+}
+
+/* .imageContainer {
+  width: 219px;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+} */
+
+.cardImage {
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  /* width: 100%; */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Заглушка, коли в рецепта немає фото (coverImage порожній) */
+.imgPlaceholder {
+  width: 219px;
+  height: 240px;
+  border-radius: 16px;
+  background-color: var(--color-grey-green);
+}
+
+.cardInfo {
+  padding-right: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  color: var(--color-main);
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.name {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  color: var(--color-main);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.price {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  color: var(--color-main);
+}
+
+.description {
+  width: 100%;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  color: var(--color-text);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.badgesContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.badges {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 100px;
+
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  background-color: var(--color-badges);
+  color: var(--color-main);
+}
+
+.moreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 60px;
+
+  border-radius: 200px;
+
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+
+  background-color: var(--color-grey-green);
+  color: var(--color-white);
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.moreBtn:hover {
+  background-color: var(--color-green-hover);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  /* fill: none;
+  stroke: currentColor; */
+}
+
+/* .saveIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+} */
+
+/* .loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+} */
+
+/* @keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} */
