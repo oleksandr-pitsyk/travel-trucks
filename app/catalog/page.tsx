@@ -13,7 +13,7 @@ import { getCampers } from '../../lib/api/clientApi';
 
 import type { GetCampersHttpResponse } from '../../lib/api/clientApi';
 
-// import CamperCard from '../../components/CamperCard/CamperCard';
+import CamperCard from '../../components/CamperCard/CamperCard';
 
 const Catalog = async () => {
   // page: number = 1,
@@ -42,13 +42,13 @@ const Catalog = async () => {
           <ul className={css.camperList}>
             {campers.map(camper => (
               <li key={camper.id} className={css.camperItem}>
-                {/* <CamperCard camper={camper} /> */}
-                <h3>{camper.name}</h3>
+                <CamperCard camper={camper} />
+                {/* <h3>{camper.name}</h3>
                 <p>Price: {camper.price}</p>
                 <p>Location: {camper.location}</p>
                 <p>Form: {camper.form}</p>
                 <p>Transmission: {camper.transmission}</p>
-                <p>Engine: {camper.engine}</p>
+                <p>Engine: {camper.engine}</p> */}
               </li>
             ))}
           </ul>
